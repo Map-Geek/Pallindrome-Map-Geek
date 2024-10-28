@@ -36,15 +36,13 @@ def is_palindrome(input_string):
     if len(input_string) == 0:
         return False
 
-    # Return True for a single character (it is always a palindrome)
-    if len(input_string) == 1:
-        return True
-
     # Create a deque from the string
     d = deque(input_string)
 
-    # Remove and compare first and last characters, if they match it's a palindrome
-    if len(d) > 1:
-        if d.popleft() == d.pop():
-            return True
-    return False
+    # While loop runs as long as there are more than one character in the deque
+    # Remove and compare first and last characters, if they don't match it's not a palindrome
+    # If all characters matched or if single character, it's a palindrome, return True
+    while len(d) > 1:
+        if d.popleft() != d.pop():
+            return False
+    return True
