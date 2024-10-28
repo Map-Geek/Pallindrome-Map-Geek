@@ -34,6 +34,9 @@ def is_palindrome(input_string):
     if len(input_string) == 0:
         return False
 
-    # Return True for a single character
+    # Return True for a single character or if two characters are same
     if len(input_string) == 1:
         return True
+    if len(input_string) == 2:
+        return input_string[0] == input_string[1]
+    return False

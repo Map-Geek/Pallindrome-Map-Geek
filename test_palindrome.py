@@ -46,3 +46,13 @@ def test_one_character_input():
     input_value = "a"
     expected_result = True
     assert is_palindrome(input_value) == expected_result
+
+
+def test_two_characters_input():
+    """
+    Test to check if is_palindrome function returns
+    True when called with two characters
+    """
+    input_value = "bb"
+    expected_result = True
+    assert is_palindrome(input_value) == expected_result
