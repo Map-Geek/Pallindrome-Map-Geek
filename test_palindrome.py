@@ -36,3 +36,13 @@ def test_empty_string_input():
     input_value = ""
     expected_result = False
     assert is_palindrome(input_value) == expected_result
+
+
+def test_one_character_input():
+    """
+    Test to check if is_palindrome function returns
+    True when called with one character
+    """
+    input_value = "a"
+    expected_result = True
+    assert is_palindrome(input_value) == expected_result

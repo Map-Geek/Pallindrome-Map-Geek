@@ -33,3 +33,7 @@ def is_palindrome(input_string):
     # Return False if string is empty
     if len(input_string) == 0:
         return False
+
+    # Return True for a single character
+    if len(input_string) == 1:
+        return True
