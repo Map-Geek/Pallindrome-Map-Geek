@@ -86,3 +86,13 @@ def test_non_palindrome_input():
     input_value = "toronto"
     expected_result = False
     assert is_palindrome(input_value) == expected_result
+
+
+def test_is_palindrome_with_sentence():
+    """
+    Test to check if is_palindrome function returns
+    True when called with a sentence
+    """
+    input_value = "Able was I ere I saw Elba"
+    expected_result = True
+    assert is_palindrome(input_value) == expected_result
