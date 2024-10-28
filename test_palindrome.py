@@ -76,3 +76,13 @@ def test_multi_character_input():
     input_value = "laval"
     expected_result = True
     assert is_palindrome(input_value) == expected_result
+
+
+def test_non_palindrome_input():
+    """
+    Test to check if is_palindrome function returns
+    False when called with a non-palindrome
+    """
+    input_value = "toronto"
+    expected_result = False
+    assert is_palindrome(input_value) == expected_result
