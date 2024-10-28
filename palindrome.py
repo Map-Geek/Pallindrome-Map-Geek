@@ -14,6 +14,8 @@ Exceptions:
     - Raises a ValueError for non-string inputs.
 """
 
+from collections import deque
+
 
 def is_palindrome(input_string):
     """
@@ -34,9 +36,15 @@ def is_palindrome(input_string):
     if len(input_string) == 0:
         return False
 
-    # Return True for a single character or if two characters are same
+    # Return True for a single character (it is always a palindrome)
     if len(input_string) == 1:
         return True
-    if len(input_string) == 2:
-        return input_string[0] == input_string[1]
+
+    # Create a deque from the string
+    d = deque(input_string)
+
+    # Remove and compare first and last characters, if they match it's a palindrome
+    if len(d) > 1:
+        if d.popleft() == d.pop():
+            return True
     return False
