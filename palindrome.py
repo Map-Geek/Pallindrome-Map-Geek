@@ -26,3 +26,10 @@ def is_palindrome(input_string):
 
     if not isinstance(input_string, str):
         raise ValueError("The input value must be a string")
+
+    # Remove spaces, non-alpha characters and convert string to lowercase
+    input_string = ''.join(c.lower() for c in input_string if c.isalpha())
+
+    # Return False if string is empty
+    if len(input_string) == 0:
+        return False

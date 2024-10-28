@@ -26,3 +26,13 @@ def test_non_string_input():
         is_palindrome(754)
     with pytest.raises(ValueError):
         is_palindrome(None)
+
+
+def test_empty_string_input():
+    """
+    Test to check if is_palindrome function returns
+    False when called with an empty string.
+    """
+    input_value = ""
+    expected_result = False
+    assert is_palindrome(input_value) == expected_result
